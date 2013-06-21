@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ember Example</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <style> body {
+        padding-top: 60px;
+    } </style>
+    <script data-main="application" src="js/vendor/require.js"></script>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">Ember Example</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/cocktails">Cocktails</a></li>
+                    <li class="active"><a href="/ingredients">Ingredients</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-handlebars">
+    This is the main application template.
+
+    {{outlet}}
+</script>
+
+<div id="main" class="container">
+
+</div>
+
+<script>
+    require(['application'], function() {
+        require(['app/pages/ingredients-page'], function() {
+
+        });
+    });
+</script>
+</body>
+</html>
